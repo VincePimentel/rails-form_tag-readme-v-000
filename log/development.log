@@ -311,3 +311,20 @@ Processing by PostsController#index as HTML
   [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
   Rendered posts/index.html.erb within layouts/application (1.0ms)
 Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 98.207.214.177 at 2019-01-29 04:20:21 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"", "description"=>""}, "authenticity_token"=>"TFt+8pbRgCRM/oR0/waagcjHrcXfvLlUjAzMcRmFLt/JUTsEEY5QiP82HVc+QgkZ26LXECEarpMlpbbsXGAFgA=="}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", ""], ["description", ""], ["created_at", "2019-01-29 04:20:21.969963"], ["updated_at", "2019-01-29 04:20:21.969963"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.31.208:40881/posts
+Completed 302 Found in 71ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 98.207.214.177 at 2019-01-29 04:20:22 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
