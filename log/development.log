@@ -181,3 +181,10 @@ Started GET "/posts/new" for 98.207.214.177 at 2019-01-29 04:08:32 +0000
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 98.207.214.177 at 2019-01-29 04:18:16 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 255ms (Views: 243.5ms | ActiveRecord: 0.0ms)
