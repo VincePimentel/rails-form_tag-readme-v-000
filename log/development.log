@@ -281,3 +281,32 @@ ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticit
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.8ms)
+
+
+Started GET "/posts" for 98.207.214.177 at 2019-01-29 04:20:08 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 98.207.214.177 at 2019-01-29 04:20:11 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 108ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 98.207.214.177 at 2019-01-29 04:20:14 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"", "description"=>""}, "authenticity_token"=>"TFt+8pbRgCRM/oR0/waagcjHrcXfvLlUjAzMcRmFLt/JUTsEEY5QiP82HVc+QgkZ26LXECEarpMlpbbsXGAFgA=="}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", ""], ["description", ""], ["created_at", "2019-01-29 04:20:14.101519"], ["updated_at", "2019-01-29 04:20:14.101519"]]
+  [1m[36m (66.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://165.227.31.208:40881/posts
+Completed 302 Found in 76ms (ActiveRecord: 67.0ms)
+
+
+Started GET "/posts" for 98.207.214.177 at 2019-01-29 04:20:14 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
